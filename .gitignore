@@ -1,7 +1,2 @@
-# Dependency directories
 node_modules/
-.meteor/local/
-package-lock.json
-
-# Log files
-*.log
+.meteor/
