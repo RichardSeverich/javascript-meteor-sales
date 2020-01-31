@@ -1,16 +1,24 @@
+// React
 import React, { Component } from 'react';
-import { users } from './../../mock-data/users.json';
+
+// Meteor
+import { withTracker } from 'meteor/react-meteor-data';
+
+// Mongo
+import { Users } from '../../../api/users';
+
+// Others
+//import { users } from './../../mock-data/users.json';
 import NavigationBar from './../nav-bar/NavigationBar';
+import Row from './Row.js';
 import './Show.css';
 
 class Show extends Component {
 
-    constructor(){
-        super();
-        this.state = {
-            users
-        }
+    constructor(props){
+        super(props);
         this.delete = this.delete.bind(this);
+        this.renderRows = this.renderRows.bind(this);
     }
     delete(_id) {
         this.setState({
@@ -20,35 +28,13 @@ class Show extends Component {
         })
         alert("deleted successfully");
     }
+
+    renderRows() {
+        return this.props.users.map((user) => (
+            <Row key={user._id} user={user} />
+        ));
+    }
     render() {
-        const rows = this.state.users.map((user, i) => {
-            let _id = user._id;
-            return (
-                <tr key={user._id}>
-                    <td scope="col"><input type="checkbox"></input></td>
-                    <td scope="col">{user._id}</td>
-                    <td scope="col">{user.nick_name}</td>
-                    <td scope="col">{user.password}</td>
-                    <td scope="col">{user.name}</td>
-                    <td scope="col">{user.last_name}</td>
-                    <td scope="col">{user.career}</td>
-                    <td scope="col">{user.email}</td>
-                    <td scope="col">{user.type}</td>
-                    <td scope="col"> 
-                        <button className="ui basic button">
-                            <i className="edit icon"></i>
-                            Edit
-                        </button>
-                    </td>
-                    <td scope="col">
-                        <button onClick={this.delete.bind(this, _id)} className="ui basic button">
-                            <i className="remove sign icon"></i>
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-            )
-        })
         return (
             <div>
                 <NavigationBar></NavigationBar>
@@ -77,7 +63,7 @@ class Show extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {rows}
+                                    {this.renderRows()}
                                 </tbody>
                             </table>
                         </div>
@@ -87,4 +73,12 @@ class Show extends Component {
         )
     }
 }
-export default Show;
+//export default Show;
+// withTracker is a function that accepts other function
+export default withTracker(() => {
+    return {
+        // return Users from mongo db
+        //users: Users.find({}).fetch(),
+        users: Users.find({}).fetch(),
+    };
+})(Show);

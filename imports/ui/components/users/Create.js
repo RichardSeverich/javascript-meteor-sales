@@ -22,6 +22,7 @@ class Create extends Component{
         let password = ReactDOM.findDOMNode(this.refs.password).value.trim();
         let name = ReactDOM.findDOMNode(this.refs.name).value.trim();
         let lastName = ReactDOM.findDOMNode(this.refs.lastName).value.trim();
+        let career = ReactDOM.findDOMNode(this.refs.career).value.trim();
         let email = ReactDOM.findDOMNode(this.refs.email).value.trim();
         let type = ReactDOM.findDOMNode(this.refs.type).value.trim();
         // Insert User directly to data bases.
@@ -31,6 +32,7 @@ class Create extends Component{
             password,
             name,
             lastName,
+            career,
             email,
             type
         });
@@ -73,6 +75,16 @@ class Create extends Component{
                             <div className="field">
                                 <div className='label'><label>Last Names</label></div>
                                 <input ref="lastName" type="text" className="form-control" minLength="3" maxLength="24"></input>
+                            </div>
+                            <div className="field">
+                                <div className='label'><label>Career</label></div>
+                                <select ref="career" className="">
+                                    <option value="developer">Developer</option>
+                                    <option value="automation">Automation</option>
+                                    <option value="manual">Manual</option>
+                                    <option value="devOps">DevOps</option>
+                                    <option value="manager">Manager</option>
+                                </select>
                             </div>
                             <div className="field">
                                 <div className='label'><label>Email</label></div>
