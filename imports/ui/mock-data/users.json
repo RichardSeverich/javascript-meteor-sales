@@ -1,0 +1,94 @@
+{
+    "users": [
+        {
+            "_id": "6090101",
+            "nick_name": "jhonsnow",
+            "password": "got123",
+            "name": "Jhon",
+            "last_name": "Snow",
+            "career": "System engineer",
+            "email": "jhon.snow@gmail.com",
+            "type": "Professor"
+        },
+        {
+            "_id": "6090102",
+            "nick_name": "TyrionL",
+            "password": "tyrion123",
+            "name": "Tyrion",
+            "last_name": "Lannister",
+            "career": "System engineer",
+            "email": "Tyrion.Lannister@gmail.com",
+            "type": "Professor"
+        },
+        {
+            "_id": "6090103",
+            "nick_name": "DaenerysT",
+            "password": "dae123",
+            "name": "Daenerys",
+            "last_name": "Targaryen",
+            "career": "System engineer",
+            "email": "Daenerys.Targaryen@gmail.com",
+            "type": "Professor"
+        },
+        {
+            "_id": "6090104",
+            "nick_name": "AryaStark",
+            "password": "Arya123",
+            "name": "Arya",
+            "last_name": "Stark",
+            "career": "System engineer",
+            "email": "Arya.Stark@gmail.com",
+            "type": "Student"
+        },
+        {
+            "_id": "6090105",
+            "nick_name": "SansaStark",
+            "password": "Sansa123",
+            "name": "Sansa",
+            "last_name": "Stark",
+            "career": "System engineer",
+            "email": "Sansa.Stark@gmail.com",
+            "type": "Student"
+        },
+        {
+            "_id": "6090106",
+            "nick_name": "KhalDrogo",
+            "password": "Khal123",
+            "name": "Khal",
+            "last_name": "Drogo",
+            "career": "System engineer",
+            "email": "Khal.Drogo@gmail.com",
+            "type": "Student"
+        },
+        {
+            "_id": "6090107",
+            "nick_name": "RobertB",
+            "password": "Robert123",
+            "name": "Robert",
+            "last_name": "Baratheon",
+            "career": "System engineer",
+            "email": "Robert.Baratheon@gmail.com",
+            "type": "Student"
+        },
+        {
+            "_id": "6090108",
+            "nick_name": "NightKing",
+            "password": "Nightt123",
+            "name": "Night",
+            "last_name": "King",
+            "career": "System engineer",
+            "email": "Night.King@gmail.com",
+            "type": "Student"
+        },
+        {
+            "_id": "6090119",
+            "nick_name": "Drogon",
+            "password": "Drogon123",
+            "name": "Targaryen",
+            "last_name": "Drogo",
+            "career": "System engineer",
+            "email": "Drogon.Targaryen@gmail.com",
+            "type": "Student"
+        }
+    ]
+}

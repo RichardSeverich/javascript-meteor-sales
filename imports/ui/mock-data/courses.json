@@ -1,0 +1,40 @@
+{
+    "courses": [
+        {
+            "_id": "5de09bfdc3c68622c07f7100",
+            "name": "TechGroup Dev A"
+        },
+        {
+            "_id": "5de09bfdc3c68622c07f7101",
+            "name": "TechGroup Dev B"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7102",
+            "name": "TechGroup Dev C"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7103",
+            "name": "TechGroup DevOps A"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7104",
+            "name": "TechGroup DevOps B"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7105",
+            "name": "TechGroup DevOps C"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7106",
+            "name": "TechGroup QA A"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7107",
+            "name": "TechGroup QA B"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f7108",
+            "name": "TechGroup QA C"
+        }
+    ]
+}

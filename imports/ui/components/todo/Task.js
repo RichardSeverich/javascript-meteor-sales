@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
- 
-import { Tasks } from '../api/tasks.js';
+import { Tasks } from '../../../api/tasks';
+import './Task.css';
  
 // Task component - represents a single todo item
 export default class Task extends Component {
@@ -20,7 +20,7 @@ export default class Task extends Component {
     // so that we can style them nicely in CSS
     const taskClassName = this.props.task.checked ? 'checked' : '';
  
-    return (
+    return (<div align="center">
       <li className={taskClassName}>
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>
           &times;
@@ -32,9 +32,9 @@ export default class Task extends Component {
           checked={!!this.props.task.checked}
           onClick={this.toggleChecked.bind(this)}
         />
-        <span className="text">{this.props.task.text}</span>
+        <span className="text">{this.props.task.taskName}</span>
       </li>
-    );
+      </div>);
   }
 }
 

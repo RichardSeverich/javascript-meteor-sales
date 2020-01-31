@@ -1,0 +1,32 @@
+{
+    "modules": [
+        {
+            "_id": "5de09bfdc3c68622c07f771",
+            "name": "Software Development Fundamentals"
+        },
+        {
+            "_id": "5de09bfdc3c68622c07f772",
+            "name": "Data Structure"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f773",
+            "name": "Software design"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f774",
+            "name": "Development UI"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f775",
+            "name": "Development Back-end"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f776",
+            "name": "Dev UI React"
+        },
+		{
+            "_id": "5de09bfdc3c68622c07f777",
+            "name": "Dev UI Angular"
+        }
+    ]
+}
