@@ -1,9 +1,18 @@
+// React
 import React, { Component } from 'react';
-import Task from './Task.js';
-import { withTracker } from 'meteor/react-meteor-data';
-import { Tasks } from '../../../api/tasks';
-import NavigationBar from './../nav-bar/NavigationBar';
 import ReactDOM from 'react-dom';
+
+// Meteor
+import { withTracker } from 'meteor/react-meteor-data';
+
+// Mongo
+import { Tasks } from '../../../api/tasks';
+
+// Components
+import Task from './Task.js';
+import NavigationBar from './../nav-bar/NavigationBar';
+
+// Others
 import './Todo.css';
 
 class Todo extends Component {
