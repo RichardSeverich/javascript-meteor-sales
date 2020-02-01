@@ -1,9 +1,7 @@
-# Javascript-react-edu
+# javascript-meteor-edu
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was created with `meteor create --react` command.
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Prerequisites 🚀
 1. Install Ubuntu 18.04.3 LTS
@@ -13,7 +11,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 5. Install Meteor 1.8.2
 6. Install google Chrome 64 Bits Version 64.0
 
-## Steps
+## Installation Steps 🔨
 
 1. Instalar Curl	
 ```
@@ -48,4 +46,9 @@ Note:Close and Re open terminal after that
 
 9. Verify Meteor: `meteor --version`
 
-
+## Installation 🔧
+1. Clone Repository: `https://github.com/RichardSeverich/javascript-meteor-edu.git`
+2. Install Dependencies: `meteor npm install`
+3. Install Dependencies: `npm install`
+4. Start program: `npm start`
+5. Enter to: `http://localhost:3000/`
