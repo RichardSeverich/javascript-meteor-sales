@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // Meteor
+import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 
 // Mongo
@@ -26,13 +27,7 @@ class Todo extends Component {
         event.preventDefault();
         // Find the text field via the React ref
         const taskName = ReactDOM.findDOMNode(this.refs.inputTaskName).value.trim();
-        // Insert task directly to data bases.
-        Tasks.insert({
-          taskName,
-          createdAt: new Date(), // current time
-        });
-        // Clear Input
-        //ReactDOM.findDOMNode(this.refs.inputTaskName).value = '';
+        Meteor.call('taskMethods.insert', taskName);
   }
 
   renderTasks() {
@@ -80,9 +75,11 @@ class Todo extends Component {
 
 // withTracker is a function that accepts other function
 export default withTracker(() => {
+    //Meteor.subscribe('taskMethods');
     return {
         // return Tasks from mongo db
         //tasks: Tasks.find({}).fetch(),
         tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
+        currentUser: Meteor.user()
     };
 })(Todo);

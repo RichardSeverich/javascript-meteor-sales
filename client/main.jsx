@@ -14,6 +14,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 import reducer from '../imports/ui/redux/reducers/CounterReducer'
 
+// User Accounts
+import '../imports/startup/accounts-confg.js';
+
 const initialState = 0;
 
 const store = createStore (
