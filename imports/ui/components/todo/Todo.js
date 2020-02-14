@@ -16,6 +16,7 @@ import NavigationBar from './../nav-bar/NavigationBar';
 // Others
 import './Todo.css';
 
+
 class Todo extends Component {
 
   constructor(props){
@@ -30,11 +31,21 @@ class Todo extends Component {
         Meteor.call('taskMethods.insert', taskName);
   }
 
-  renderTasks() {
-    return this.props.tasks.map((task) => (
+  // Clasic
+  /*renderTasks() { 
+    return this.props.tasks.map((task) => ( 
         <Task key={task._id} task={task} />
     ));
-  }
+  }*/
+
+    renderTasks() { 
+    return this.props.tasks.map(task => {
+        const currentUser = this.props.currentUser;
+        const currentUserId = currentUser && currentUser._id;
+        const showPrivateButton = task.owner === currentUserId;
+        return <Task key={task._id} task={task} showPrivateButton={showPrivateButton}/>
+    });
+   }
   
   render() {
     return ( <div>
@@ -75,7 +86,7 @@ class Todo extends Component {
 
 // withTracker is a function that accepts other function
 export default withTracker(() => {
-    //Meteor.subscribe('taskMethods');
+    Meteor.subscribe('taskMethods'); // this should be the same taskMethods line 8
     return {
         // return Tasks from mongo db
         //tasks: Tasks.find({}).fetch(),

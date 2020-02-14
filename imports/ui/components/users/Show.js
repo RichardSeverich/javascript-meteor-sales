@@ -76,9 +76,9 @@ class Show extends Component {
 //export default Show;
 // withTracker is a function that accepts other function
 export default withTracker(() => {
+    Meteor.subscribe('userLocalMethods'); // this should be the same taskMethods line 8
     return {
         // return Users from mongo db
-        //users: Users.find({}).fetch(),
-        users: Users.find({}).fetch(),
+        users: Users.find({}).fetch()
     };
 })(Show);
