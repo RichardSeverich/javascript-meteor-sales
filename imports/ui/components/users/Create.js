@@ -26,7 +26,7 @@ class Create extends Component{
         let email = ReactDOM.findDOMNode(this.refs.email).value.trim();
         let type = ReactDOM.findDOMNode(this.refs.type).value.trim();
         // Insert User directly to data bases.
-        Users.insert({
+        /*Users.insert({
             id,
             nickname,
             password,
@@ -35,6 +35,18 @@ class Create extends Component{
             career,
             email,
             type
+        });*/
+        Accounts.createUser({
+            username: nickname,
+            email: email,
+            password: password,
+            profile: {
+                id: id,
+                name: name,
+                lastName:lastName,
+                career: career,
+                type: type
+            }
         });
         alert("created successfully");
         //Clear Inputs

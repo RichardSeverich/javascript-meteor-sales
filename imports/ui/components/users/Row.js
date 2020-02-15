@@ -17,14 +17,14 @@ class Row extends Component {
         return (
                 <tr>
                     <td scope="col"><input type="checkbox"></input></td>
-                    <td scope="col">{this.props.user.id}</td>
-                    <td scope="col">{this.props.user.nickname}</td>
-                    <td scope="col">{this.props.user.password}</td>
-                    <td scope="col">{this.props.user.name}</td>
-                    <td scope="col">{this.props.user.lastName}</td>
-                    <td scope="col">{this.props.user.career}</td>
-                    <td scope="col">{this.props.user.email}</td>
-                    <td scope="col">{this.props.user.type}</td>
+                    <td scope="col">{this.props.user.profile.id}</td>
+                    <td scope="col">{this.props.user.username}</td>
+                    <td scope="col">password</td>
+                    <td scope="col">{this.props.user.profile.name}</td>
+                    <td scope="col">{this.props.user.profile.lastName}</td>
+                    <td scope="col">{this.props.user.profile.career}</td>
+                    <td scope="col">{this.props.user.emails[0].address}</td>
+                    <td scope="col">{this.props.user.profile.type}</td>
                     <td scope="col"> 
                         <button className="ui basic button">
                             <i className="edit icon"></i>
