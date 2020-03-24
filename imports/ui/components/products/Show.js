@@ -19,7 +19,7 @@ class Show extends Component {
           </td>
           <td scope="col">{product._id}</td>
           <td scope="col">{product.name}</td>
-          <td scope="col">{product.value}</td>
+          <td scope="col">{product.price}</td>
           <td scope="col">{product.quantity}</td>
           <td scope="col">
             <button className="ui basic button">
@@ -29,7 +29,7 @@ class Show extends Component {
           </td>
           <td scope="col">
             <button className="ui basic button">
-              <i className="remove sign icon"></i>
+              <i className="trash alternate outline icon"></i>
               Eliminar
             </button>
           </td>
@@ -51,8 +51,9 @@ class Show extends Component {
                     <th scope="col"></th>
                     <th scope="col">_id</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Valor</th>
+                    <th scope="col">Precio</th>
                     <th scope="col">Cantidad</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
                 </thead>

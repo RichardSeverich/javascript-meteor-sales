@@ -13,8 +13,8 @@ if (Meteor.isServer) {
 Meteor.methods({
   "productMethods.insert"(product) {
     check(product.name, String);
-    check(product.value, Integer);
-    check(product.quantity, Integer);
+    check(product.price, Number);
+    check(product.quantity, Number);
     // Make sure the user is logged in before inserting a task
     if (!this.userId) {
       throw new Meteor.Error("not-authorized");
