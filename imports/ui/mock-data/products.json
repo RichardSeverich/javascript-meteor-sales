@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "_id": "5de09bfdc3c68622c07f7100",
+      "name": "Pollo Escolar",
+      "value": "8",
+      "quantity": "100"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7101",
+      "name": "Pollo Economico",
+      "value": "12",
+      "quantity": "100"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7102",
+      "name": "Pollo Cuarto",
+      "value": "16",
+      "quantity": "50"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7103",
+      "name": "Medio Pollo",
+      "value": "25",
+      "quantity": "20"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7104",
+      "name": "Pollo Entero",
+      "value": "25",
+      "quantity": "10"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7105",
+      "name": "Porcion de papas",
+      "value": "7",
+      "quantity": "Unlimited"
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7106",
+      "name": "Porcion de arroz",
+      "value": "7",
+      "quantity": "Unlimited."
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7106",
+      "name": "Cocacola 1 litro",
+      "value": "10",
+      "quantity": "Unlimited."
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7107",
+      "name": "Cocacola Popular",
+      "value": "7",
+      "quantity": "Unlimited."
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7108",
+      "name": "Cocacola 2 litros",
+      "value": "18",
+      "quantity": "Unlimited."
+    },
+    {
+      "_id": "5de09bfdc3c68622c07f7109",
+      "name": "Jugo del valle 1 litro",
+      "value": "10",
+      "quantity": "Unlimited"
+    }
+  ]
+}

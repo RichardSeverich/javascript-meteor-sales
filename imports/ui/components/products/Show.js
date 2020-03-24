@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { modules } from "./../../mock-data/modules.json";
+import { products } from "./../../mock-data/products.json";
 import NavigationBar from "./../nav-bar/NavigationBar";
 import "./Show.css";
 
@@ -7,31 +7,30 @@ class Show extends Component {
   constructor() {
     super();
     this.state = {
-      modules
+      products
     };
   }
   render() {
-    const rows = this.state.modules.map((module, i) => {
+    const rows = this.state.products.map((product, i) => {
       return (
-        <tr key={module._id}>
+        <tr key={product._id}>
           <td scope="col">
             <input type="checkbox"></input>
           </td>
-          <td scope="col">{module._id}</td>
-          <td scope="col">{module.name}</td>
-          <td scope="col">
-            <button className="ui basic button">Details</button>
-          </td>
+          <td scope="col">{product._id}</td>
+          <td scope="col">{product.name}</td>
+          <td scope="col">{product.value}</td>
+          <td scope="col">{product.quantity}</td>
           <td scope="col">
             <button className="ui basic button">
               <i className="edit icon"></i>
-              Edit
+              Editar
             </button>
           </td>
           <td scope="col">
             <button className="ui basic button">
               <i className="remove sign icon"></i>
-              Delete
+              Eliminar
             </button>
           </td>
         </tr>
@@ -41,9 +40,9 @@ class Show extends Component {
       <div>
         <NavigationBar></NavigationBar>
         <div align="center">
-          <div className="card-modules">
+          <div className="card-courses">
             <div className="margin-bottom">
-              <h3 align="center">Modules</h3>
+              <h3 align="center">Productos</h3>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
@@ -51,9 +50,9 @@ class Show extends Component {
                   <tr>
                     <th scope="col"></th>
                     <th scope="col">_id</th>
-                    <th scope="col">name</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Cantidad</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
