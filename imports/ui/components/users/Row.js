@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-// Mongo
-import { Users } from "../../../api/users";
 
 class Row extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.delete = this.delete.bind(this);
   }
 
   delete(_id) {
-    Users.remove(_id);
     alert("deleted successfully");
   }
 
@@ -24,7 +21,6 @@ class Row extends Component {
         <td scope="col">password</td>
         <td scope="col">{this.props.user.profile.name}</td>
         <td scope="col">{this.props.user.profile.lastName}</td>
-        <td scope="col">{this.props.user.profile.career}</td>
         <td scope="col">{this.props.user.emails[0].address}</td>
         <td scope="col">{this.props.user.profile.type}</td>
         <td scope="col">

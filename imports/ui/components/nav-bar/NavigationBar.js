@@ -17,10 +17,10 @@ class NavigationBar extends Component {
     this.navigateMeteorTodo = this.navigateMeteorTodo.bind(this);
   }
   navigateUsersTable() {
-    this.props.history.push("/users-form");
+    this.props.history.push("/users-table");
   }
   navigateUsersForm() {
-    this.props.history.push("/users-table");
+    this.props.history.push("/users-form");
   }
   navigateClientsTable() {
     this.props.history.push("/clients-table");
