@@ -10,23 +10,19 @@ import UsersShow from "./components/users/Show";
 import UsersCreate from "./components/users/Create";
 import ProductsTable from "./components/products/Table";
 import ProductsForm from "./components/products/Form";
-import ModulesShow from "./components/modules/Show";
-import ModulesCreate from "./components/modules/Create";
-import ScoresShow from "./components/scores/Show";
-import ScoresCreate from "./components/scores/Create";
+import ClientsTable from "./components/clients/Table";
+import ClientsForm from "./components/clients/Form";
 import Todo from "./components/todo/Todo";
 
 const AppRoutes = () => (
   <App>
     <Switch>
-      <Route exact path="/scores-create" component={ScoresCreate} />
-      <Route exact path="/scores-show" component={ScoresShow} />
-      <Route exact path="/modules-create" component={ModulesCreate} />
-      <Route exact path="/modules-show" component={ModulesShow} />
+      <Route exact path="/clients-form" component={ClientsForm} />
+      <Route exact path="/clients-table" component={ClientsTable} />
       <Route exact path="/products-form" component={ProductsForm} />
       <Route exact path="/products-table" component={ProductsTable} />
-      <Route exact path="/users-create" component={UsersCreate} />
-      <Route exact path="/users-show" component={UsersShow} />
+      <Route exact path="/users-form" component={UsersCreate} />
+      <Route exact path="/users-table" component={UsersShow} />
       <Route exact path="/nav-bar" component={NavigationBar} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/todo" component={Todo} />

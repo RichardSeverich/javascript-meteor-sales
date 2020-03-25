@@ -7,48 +7,38 @@ import "./NavigationBar.css";
 class NavigationBar extends Component {
   constructor(props) {
     super(props);
-    this.navigateUsersShow = this.navigateUsersShow.bind(this);
-    this.navigateUsersCreate = this.navigateUsersCreate.bind(this);
-    this.navigateProductsShow = this.navigateProductsShow.bind(this);
-    this.navigateProductsCreate = this.navigateProductsCreate.bind(this);
-    this.navigateModulesShow = this.navigateModulesShow.bind(this);
-    this.navigateModulesCreate = this.navigateModulesCreate.bind(this);
+    this.navigateUsersTable = this.navigateUsersTable.bind(this);
+    this.navigateUsersForm = this.navigateUsersForm.bind(this);
+    this.navigateClientsForm = this.navigateClientsForm.bind(this);
+    this.navigateClientsTable = this.navigateClientsTable.bind(this);
+    this.navigateProductsTable = this.navigateProductsTable.bind(this);
+    this.navigateProductsForm = this.navigateProductsForm.bind(this);
     this.navigateLogin = this.navigateLogin.bind(this);
-    this.navigateScoresCreate = this.navigateScoresCreate.bind(this);
-    this.navigateScoresShow = this.navigateScoresShow.bind(this);
-    this.navigateCounter = this.navigateCounter.bind(this);
-    this.navigateCounterRedux = this.navigateCounterRedux.bind(this);
     this.navigateMeteorTodo = this.navigateMeteorTodo.bind(this);
   }
-  navigateUsersShow() {
-    this.props.history.push("/users-show");
+  navigateUsersTable() {
+    this.props.history.push("/users-form");
   }
-  navigateUsersCreate() {
-    this.props.history.push("/users-create");
+  navigateUsersForm() {
+    this.props.history.push("/users-table");
   }
-  navigateProductsShow() {
+  navigateClientsTable() {
+    this.props.history.push("/clients-table");
+  }
+  navigateClientsForm() {
+    this.props.history.push("/clients-form");
+  }
+  navigateProductsTable() {
     this.props.history.push("/products-table");
   }
-  navigateProductsCreate() {
+  navigateProductsForm() {
     this.props.history.push("/products-form");
   }
-  navigateModulesShow() {
-    this.props.history.push("/modules-table");
+  navigateSalesTable() {
+    this.props.history.push("/sales-table");
   }
-  navigateModulesCreate() {
-    this.props.history.push("/modules-create");
-  }
-  navigateScoresShow() {
-    this.props.history.push("/scores-show");
-  }
-  navigateScoresCreate() {
-    this.props.history.push("/scores-create");
-  }
-  navigateCounter() {
-    this.props.history.push("/counter");
-  }
-  navigateCounterRedux() {
-    this.props.history.push("/counter-redux");
+  navigateSalesForm() {
+    this.props.history.push("/sales-form");
   }
   navigateLogin() {
     this.props.history.push("/login");
@@ -74,13 +64,30 @@ class NavigationBar extends Component {
               <div className="ui compact menu">
                 <div className="ui simple dropdown item">
                   <i className="user icon"></i>
+                  Usuarios
+                  <i className="dropdown icon"></i>
+                  <div className="menu">
+                    <div onClick={this.navigateUsersForm} className="item">
+                      Registrar
+                    </div>
+                    <div onClick={this.navigateUsersTable} className="item">
+                      Mostrar
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="item">
+              <div className="ui compact menu">
+                <div className="ui simple dropdown item">
+                  <i className="users icon"></i>
                   Clientes
                   <i className="dropdown icon"></i>
                   <div className="menu">
-                    <div onClick={this.navigateUsersCreate} className="item">
+                    <div onClick={this.navigateClientsForm} className="item">
                       Registrar
                     </div>
-                    <div onClick={this.navigateUsersShow} className="item">
+                    <div onClick={this.navigateClientsTable} className="item">
                       Mostrar
                     </div>
                   </div>
@@ -94,10 +101,10 @@ class NavigationBar extends Component {
                   Productos
                   <i className="dropdown icon"></i>
                   <div className="menu">
-                    <div onClick={this.navigateProductsCreate} className="item">
+                    <div onClick={this.navigateProductsForm} className="item">
                       Registrar
                     </div>
-                    <div onClick={this.navigateProductsShow} className="item">
+                    <div onClick={this.navigateProductsTable} className="item">
                       Mostrar
                     </div>
                   </div>
@@ -111,10 +118,10 @@ class NavigationBar extends Component {
                   Ventas
                   <i className="dropdown icon"></i>
                   <div className="menu">
-                    <div onClick={this.navigateModulesCreate} className="item">
+                    <div onClick={this.navigateSalesForm} className="item">
                       Registrar
                     </div>
-                    <div onClick={this.navigateModulesShow} className="item">
+                    <div onClick={this.navigateSalesTable} className="item">
                       Mostrar
                     </div>
                   </div>
