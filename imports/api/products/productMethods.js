@@ -21,7 +21,7 @@ Meteor.methods({
     }
     Products.insert({
       name: product.name,
-      value: product.value,
+      price: product.price,
       quantity: product.quantity,
       createdAt: new Date(),
       owner: this.userId,

@@ -27,13 +27,13 @@ class NavigationBar extends Component {
     this.props.history.push("/users-create");
   }
   navigateProductsShow() {
-    this.props.history.push("/products-show");
+    this.props.history.push("/products-table");
   }
   navigateProductsCreate() {
-    this.props.history.push("/products-create");
+    this.props.history.push("/products-form");
   }
   navigateModulesShow() {
-    this.props.history.push("/modules-show");
+    this.props.history.push("/modules-table");
   }
   navigateModulesCreate() {
     this.props.history.push("/modules-create");

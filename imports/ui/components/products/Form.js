@@ -7,7 +7,7 @@ import { Meteor } from "meteor/meteor";
 // Others
 import NavigationBar from "./../nav-bar/NavigationBar";
 
-class Create extends Component {
+class Form extends Component {
   constructor(props) {
     super(props);
     this.handleCreate = this.handleCreate.bind(this);
@@ -30,11 +30,11 @@ class Create extends Component {
       } else {
         alert("Exito");
         //Clear Inputs
-        ReactDOM.findDOMNode(this.refs.id).value = "";
-        ReactDOM.findDOMNode(this.refs.nickname).value = "";
-        ReactDOM.findDOMNode(this.refs.password).value = "";
       }
     });
+    ReactDOM.findDOMNode(this.refs.name).value = "";
+    ReactDOM.findDOMNode(this.refs.price).value = "";
+    ReactDOM.findDOMNode(this.refs.quantity).value = "";
   }
 
   render() {
@@ -97,4 +97,4 @@ class Create extends Component {
     );
   }
 }
-export default Create;
+export default Form;

@@ -8,8 +8,8 @@ import Login from "./components/login/Login";
 import NavigationBar from "./components/nav-bar/NavigationBar";
 import UsersShow from "./components/users/Show";
 import UsersCreate from "./components/users/Create";
-import ProductsShow from "./components/products/Show";
-import ProductsCreate from "./components/products/Create";
+import ProductsTable from "./components/products/Table";
+import ProductsForm from "./components/products/Form";
 import ModulesShow from "./components/modules/Show";
 import ModulesCreate from "./components/modules/Create";
 import ScoresShow from "./components/scores/Show";
@@ -25,8 +25,8 @@ const AppRoutes = () => (
       <Route exact path="/scores-show" component={ScoresShow} />
       <Route exact path="/modules-create" component={ModulesCreate} />
       <Route exact path="/modules-show" component={ModulesShow} />
-      <Route exact path="/products-create" component={ProductsCreate} />
-      <Route exact path="/products-show" component={ProductsShow} />
+      <Route exact path="/products-form" component={ProductsForm} />
+      <Route exact path="/products-table" component={ProductsTable} />
       <Route exact path="/users-create" component={UsersCreate} />
       <Route exact path="/users-show" component={UsersShow} />
       <Route exact path="/nav-bar" component={NavigationBar} />
