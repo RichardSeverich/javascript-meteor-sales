@@ -85,7 +85,7 @@ class Form extends Component {
                       type="button"
                       className="ui basic button"
                     >
-                      <i className="save icon"></i>Registrar
+                      <i className="save icon"></i>Guardar
                     </button>
                   </div>
                 </form>

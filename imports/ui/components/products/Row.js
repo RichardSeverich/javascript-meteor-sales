@@ -11,14 +11,23 @@ class Row extends Component {
   }
 
   render() {
+    let item = this.props.product;
+    let date =
+      item.createdAt.getFullYear() +
+      "-" +
+      item.createdAt.getMonth() +
+      "-" +
+      item.createdAt.getDate();
     return (
       <tr>
         <td scope="col">
           <input type="checkbox"></input>
         </td>
-        <td scope="col">{this.props.product.name}</td>
-        <td scope="col">{this.props.product.price}</td>
-        <td scope="col">{this.props.product.quantity}</td>
+        <td scope="col">{item.name}</td>
+        <td scope="col">{item.price}</td>
+        <td scope="col">{item.quantity}</td>
+        <td scope="col">{date}</td>
+        <td scope="col">{item.username}</td>
         <td scope="col">
           <button className="ui basic button">
             <i className="edit icon"></i>

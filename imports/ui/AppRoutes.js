@@ -14,8 +14,6 @@ import ModulesShow from "./components/modules/Show";
 import ModulesCreate from "./components/modules/Create";
 import ScoresShow from "./components/scores/Show";
 import ScoresCreate from "./components/scores/Create";
-import Counter from "./components/counter/Counter";
-import CounterRedux from "./components/counter-redux/CounterContainer";
 import Todo from "./components/todo/Todo";
 
 const AppRoutes = () => (
@@ -31,8 +29,6 @@ const AppRoutes = () => (
       <Route exact path="/users-show" component={UsersShow} />
       <Route exact path="/nav-bar" component={NavigationBar} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/counter" component={Counter} />
-      <Route exact path="/counter-redux" component={CounterRedux} />
       <Route exact path="/todo" component={Todo} />
       <Route exact path="/" component={Login} />
       <Route component={Login} />

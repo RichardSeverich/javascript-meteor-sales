@@ -74,7 +74,7 @@ class NavigationBar extends Component {
               <div className="ui compact menu">
                 <div className="ui simple dropdown item">
                   <i className="user icon"></i>
-                  Usuarios
+                  Clientes
                   <i className="dropdown icon"></i>
                   <div className="menu">
                     <div onClick={this.navigateUsersCreate} className="item">
@@ -145,12 +145,6 @@ class NavigationBar extends Component {
                   Examples
                   <i className="dropdown icon"></i>
                   <div className="menu">
-                    <div onClick={this.navigateCounter} className="item">
-                      Counter
-                    </div>
-                    <div onClick={this.navigateCounterRedux} className="item">
-                      Counter Redux
-                    </div>
                     <div onClick={this.navigateMeteorTodo} className="item">
                       Meteor Todo
                     </div>
