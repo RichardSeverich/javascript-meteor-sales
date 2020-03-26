@@ -13,6 +13,8 @@ class NavigationBar extends Component {
     this.navigateClientsTable = this.navigateClientsTable.bind(this);
     this.navigateProductsTable = this.navigateProductsTable.bind(this);
     this.navigateProductsForm = this.navigateProductsForm.bind(this);
+    this.navigateSalesForm = this.navigateSalesForm.bind(this);
+    this.navigateSalesTable = this.navigateSalesTable.bind(this);
     this.navigateLogin = this.navigateLogin.bind(this);
     this.navigateMeteorTodo = this.navigateMeteorTodo.bind(this);
   }
@@ -135,12 +137,8 @@ class NavigationBar extends Component {
                   Reportes
                   <i className="dropdown icon"></i>
                   <div className="menu">
-                    <div onClick={this.navigateScoresCreate} className="item">
-                      Ventas
-                    </div>
-                    <div onClick={this.navigateScoresShow} className="item">
-                      Ingresos
-                    </div>
+                    <div className="item">Ventas</div>
+                    <div className="item">Ingresos</div>
                   </div>
                 </div>
               </div>

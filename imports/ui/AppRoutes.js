@@ -12,11 +12,15 @@ import ProductsTable from "./components/products/Table";
 import ProductsForm from "./components/products/Form";
 import ClientsTable from "./components/clients/Table";
 import ClientsForm from "./components/clients/Form";
+import SalesForm from "./components/sales/Form";
+import SalesTable from "./components/sales/Table";
 import Todo from "./components/todo/Todo";
 
 const AppRoutes = () => (
   <App>
     <Switch>
+      <Route exact path="/sales-table" component={SalesTable} />
+      <Route exact path="/sales-form" component={SalesForm} />
       <Route exact path="/clients-form" component={ClientsForm} />
       <Route exact path="/clients-table" component={ClientsTable} />
       <Route exact path="/products-form" component={ProductsForm} />

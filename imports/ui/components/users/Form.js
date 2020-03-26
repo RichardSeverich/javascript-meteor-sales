@@ -137,9 +137,6 @@ class Form extends Component {
                       <i className="save icon"></i>
                       Add
                     </button>
-                    <button type="button" className="ui basic button">
-                      Cancel
-                    </button>
                   </div>
                 </form>
               </div>
