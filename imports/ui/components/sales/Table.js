@@ -22,17 +22,18 @@ class Table extends Component {
         <div align="center">
           <div className="card-sales">
             <div className="margin-bottom">
-              <h3 align="center">Sales</h3>
+              <h3 align="center">Ventas</h3>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">CI o NIT</th>
+                    <th scope="col">ci o nit</th>
                     <th scope="col">apellido</th>
-                    <th scope="col">Fecha (Año-Mes-Dia)</th>
-                    <th scope="col">Creado por</th>
+                    <th scope="col">fecha (año-mes-dia)</th>
+                    <th scope="col">creado por</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>

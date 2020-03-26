@@ -46,7 +46,7 @@ class Form extends Component {
           <div className="six wide column">
             <div className="ui fluid card">
               <div className="margin-bottom-one"></div>
-              <h3 align="center">Users</h3>
+              <h3 align="center">Usuarios</h3>
               <div className="margin-bottom-one"></div>
               <div className="content" align="center">
                 <form className="ui form">
@@ -121,7 +121,7 @@ class Form extends Component {
                   </div>
                   <div className="field">
                     <div className="label">
-                      <label>Type</label>
+                      <label>Tipo</label>
                     </div>
                     <select ref="type" className="">
                       <option value="admin">Administrador</option>
@@ -135,7 +135,7 @@ class Form extends Component {
                       className="ui basic button"
                     >
                       <i className="save icon"></i>
-                      Add
+                      Guardar
                     </button>
                   </div>
                 </form>

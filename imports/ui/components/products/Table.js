@@ -32,11 +32,11 @@ class Table extends Component {
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Fecha (Año-Mes-Dia)</th>
-                    <th scope="col">Creado por</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">stock</th>
+                    <th scope="col">fecha (año-mes-dia)</th>
+                    <th scope="col">creado por</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>

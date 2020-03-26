@@ -1,11 +1,10 @@
-// React
 import React, { Component } from "react";
-// Meteor
 import { withTracker } from "meteor/react-meteor-data";
-// Others
 import NavigationBar from "./../nav-bar/NavigationBar";
 import Row from "./Row.js";
-import "./Table.css";
+import { Products } from "../../../api/products/products";
+import { productsMock } from "./../../mock-data/products.json";
+import "./../products/Table.css";
 
 class Table extends Component {
   constructor(props) {
@@ -14,7 +13,13 @@ class Table extends Component {
   }
 
   renderRows() {
-    return this.props.users.map(user => <Row key={user._id} user={user} />);
+    let filteredProducts = this.props.products.map(
+      product => products._id == this.props.sale_id_products
+    );
+
+    return this.props.products.map(product => (
+      <Row key={product._id} product={product} />
+    ));
   }
 
   render() {
@@ -22,22 +27,22 @@ class Table extends Component {
       <div>
         <NavigationBar></NavigationBar>
         <div align="center">
-          <div className="card-users">
+          <div className="card-products">
             <div className="margin-bottom">
-              <h3 align="center">Usuarios</h3>
+              <h3 align="center">Ventas</h3>
+              <h4 align="center">Nit: {this.props.sale.id_card}</h4>
+              <h4 align="center">Cliente: {this.props.sale.name}</h4>
             </div>
             <div className="card-body">
               <table className="ui striped selectable celled table">
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">cedula</th>
-                    <th scope="col">nickname</th>
-                    <th scope="col">contrasena</th>
-                    <th scope="col">nombres</th>
-                    <th scope="col">apellidos</th>
-                    <th scope="col">email</th>
-                    <th scope="col">tipo</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">cantidad</th>
+                    <th scope="col">fecha (año-mes-dia)</th>
+                    <th scope="col">creado por</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
@@ -51,10 +56,11 @@ class Table extends Component {
     );
   }
 }
-//export default Show;
-// withTracker is a function that accepts other function
+
 export default withTracker(() => {
+  Meteor.subscribe("products");
   return {
-    users: Meteor.users.find({}) //only currently user.
+    products: Products.find({}).fetch(),
+    currentUser: Meteor.user()
   };
 })(Table);

@@ -1,13 +1,22 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class Row extends Component {
   constructor(props) {
     super(props);
     this.delete = this.delete.bind(this);
+    this.navigateAddProducts = this.navigateAddProducts.bind(this);
   }
 
   delete(_id) {
     alert("deleted successfully");
+  }
+
+  navigateAddProducts(item) {
+    this.props.history.push({
+      pathname: "/sales-table-products",
+      sale: item
+    });
   }
 
   render() {
@@ -18,6 +27,7 @@ class Row extends Component {
       item.createdAt.getMonth() +
       "-" +
       item.createdAt.getDate();
+    item.date = date;
     return (
       <tr>
         <td scope="col">
@@ -25,12 +35,21 @@ class Row extends Component {
         </td>
         <td scope="col">{item.client_id_card}</td>
         <td scope="col">{item.client_name}</td>
-        <td scope="col">{date}</td>
+        <td scope="col">{item.date}</td>
         <td scope="col">{item.username}</td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.navigateAddProducts.bind(this, item)}
+            className="ui basic button"
+          >
             <i className="cart plus icon"></i>
-            Registrar
+            Productos
+          </button>
+        </td>
+        <td scope="col">
+          <button className="ui basic button">
+            <i className="search plus icon"></i>
+            Detalle
           </button>
         </td>
         <td scope="col">
@@ -49,4 +68,4 @@ class Row extends Component {
     );
   }
 }
-export default Row;
+export default withRouter(Row);

@@ -50,7 +50,7 @@ class Form extends Component {
               <div className="content" align="center">
                 <form action="" className="ui form">
                   <div className="field">
-                    <label>Name</label>
+                    <label>Nombre</label>
                     <input
                       ref="name"
                       type="text"

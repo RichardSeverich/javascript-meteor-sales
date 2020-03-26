@@ -18,7 +18,7 @@ class Row extends Component {
         </td>
         <td scope="col">{this.props.user.profile.id}</td>
         <td scope="col">{this.props.user.username}</td>
-        <td scope="col">password</td>
+        <td scope="col">*******</td>
         <td scope="col">{this.props.user.profile.name}</td>
         <td scope="col">{this.props.user.profile.lastName}</td>
         <td scope="col">{this.props.user.emails[0].address}</td>
