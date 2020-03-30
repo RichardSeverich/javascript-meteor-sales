@@ -51,7 +51,7 @@ class Form extends Component {
                     ></input>
                   </div>
                   <div className="field">
-                    <label>Name</label>
+                    <label>Apellido</label>
                     <input
                       ref="name"
                       type="text"

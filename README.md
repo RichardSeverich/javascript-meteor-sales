@@ -65,3 +65,59 @@ sudo apt-get install curl
 <p align="center">
   <img src="documentation/project-flow.jpg">
 </p>
+
+## UI
+
+### Login
+
+<p align="center">
+  <img src="documentation/ui-login.jpg">
+</p>
+ 
+### Navigation bar
+
+<p align="center">
+  <img src="documentation/ui-nav-bar.jpg">
+</p>
+
+### Clients - Form
+
+<p align="center">
+  <img src="documentation/ui-clients-form.jpg">
+</p>
+
+### Clients - Table
+
+<p align="center">
+  <img src="documentation/ui-clients-table.jpg">
+</p>
+
+### Products - Form
+
+<p align="center">
+  <img src="documentation/ui-products-form.jpg">
+</p>
+
+### Products - Table
+
+<p align="center">
+  <img src="documentation/ui-products-table.jpg">
+</p>
+
+### Sales - Table
+
+<p align="center">
+  <img src="documentation/ui-sales-table.jpg">
+</p>
+
+### Sales - Add productos
+
+<p align="center">
+  <img src="documentation/ui-sales-table-products.jpg">
+</p>
+ 
+### Sales - Details
+
+<p align="center">
+  <img src="documentation/ui-sales-table-details.jpg">
+</p>

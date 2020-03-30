@@ -70,7 +70,7 @@ class Form extends Component {
                     ></input>
                   </div>
                   <div className="field">
-                    <label>Cantidad</label>
+                    <label>Stock</label>
                     <input
                       ref="quantity"
                       type="number"
