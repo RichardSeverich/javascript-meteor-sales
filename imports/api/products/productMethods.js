@@ -32,5 +32,10 @@ Meteor.methods({
   "productMethods.remove"(id) {
     check(id, String);
     Products.remove(id);
+  },
+
+  "productMethods.finedOne"(id) {
+    check(id, String);
+    return Products.findOne(id);
   }
 });

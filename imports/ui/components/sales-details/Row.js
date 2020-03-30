@@ -25,15 +25,9 @@ class Row extends Component {
         </td>
         <td scope="col">{item.name}</td>
         <td scope="col">{item.price}</td>
-        <td scope="col">{item.quantity}</td>
+        <td scope="col">{item.quantitySold}</td>
         <td scope="col">{date}</td>
         <td scope="col">{item.username}</td>
-        <td scope="col">
-          <button className="ui basic button">
-            <i className="edit icon"></i>
-            Editar
-          </button>
-        </td>
         <td scope="col">
           <button className="ui basic button">
             <i className="trash alternate outline icon"></i>

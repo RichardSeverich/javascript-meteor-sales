@@ -19,6 +19,13 @@ class Row extends Component {
     });
   }
 
+  navigateDetails(item) {
+    this.props.history.push({
+      pathname: "/sales-table-details",
+      sale: item
+    });
+  }
+
   render() {
     let item = this.props.sale;
     let date =
@@ -47,7 +54,10 @@ class Row extends Component {
           </button>
         </td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.navigateDetails.bind(this, item)}
+            className="ui basic button"
+          >
             <i className="search plus icon"></i>
             Detalle
           </button>

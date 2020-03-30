@@ -27,6 +27,11 @@ Meteor.methods({
     SalesProducts.insert(saleProduct);
   },
 
+  /* "saleProductMethods.findBySaleId"(saleId) {
+    check(saleId, String);
+    return SalesProducts.find({ sale_id: saleId });
+  },*/
+
   "saleProductMethods.remove"(id) {
     check(id, String);
     saleProduct.remove(id);
