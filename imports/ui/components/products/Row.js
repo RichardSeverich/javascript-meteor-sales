@@ -6,8 +6,18 @@ class Row extends Component {
     this.delete = this.delete.bind(this);
   }
 
-  delete(_id) {
-    alert("deleted successfully");
+  delete(id) {
+    Meteor.call("productMethods.remove", id, function(error, result) {
+      if (error) {
+        alert(error);
+      } else {
+        if (result) {
+          alert("borrado exitosamente");
+        } else {
+          alert("producto tiene ventas");
+        }
+      }
+    });
   }
 
   render() {
@@ -35,7 +45,10 @@ class Row extends Component {
           </button>
         </td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.delete.bind(this, item._id)}
+            className="ui basic button"
+          >
             <i className="trash alternate outline icon"></i>
             Eliminar
           </button>
