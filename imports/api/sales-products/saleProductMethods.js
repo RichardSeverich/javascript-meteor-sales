@@ -34,6 +34,6 @@ Meteor.methods({
 
   "saleProductMethods.remove"(id) {
     check(id, String);
-    saleProduct.remove(id);
+    SalesProducts.remove(id);
   }
 });

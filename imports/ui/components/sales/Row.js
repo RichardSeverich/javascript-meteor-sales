@@ -8,8 +8,18 @@ class Row extends Component {
     this.navigateAddProducts = this.navigateAddProducts.bind(this);
   }
 
-  delete(_id) {
-    alert("deleted successfully");
+  delete(id) {
+    Meteor.call("saleMethods.remove", id, function(error, result) {
+      if (error) {
+        alert(error);
+      } else {
+        if (result) {
+          alert("borrado exitosamente");
+        } else {
+          alert("venta tiene productos vendidos");
+        }
+      }
+    });
   }
 
   navigateAddProducts(item) {
@@ -69,7 +79,10 @@ class Row extends Component {
           </button>
         </td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.delete.bind(this, item._id)}
+            className="ui basic button"
+          >
             <i className="trash alternate outline icon"></i>
             Eliminar
           </button>

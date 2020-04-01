@@ -28,6 +28,7 @@ class Table extends Component {
       let totalOneProduct =
         parseInt(elementSaleProduct.quantity) * parseInt(productSold.price);
       productSold.quantitySold = elementSaleProduct.quantity;
+      productSold.saleProductId = elementSaleProduct._id;
       finalProductsSold.push(productSold);
       total = total + totalOneProduct;
     });
