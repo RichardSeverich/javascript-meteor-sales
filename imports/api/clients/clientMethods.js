@@ -1,5 +1,6 @@
 import { Meteor } from "meteor/meteor";
 import { Clients } from "./clients";
+import { Sales } from "./../sales/sales";
 import { check } from "meteor/check";
 
 // This means that the code only is going to run in the server side.
@@ -29,7 +30,12 @@ Meteor.methods({
 
   "clientMethods.remove"(id) {
     check(id, String);
+    let sales = Sales.findOne({ client_id: id });
+    if (sales) {
+      return false;
+    }
     Clients.remove(id);
+    return true;
   },
 
   "clientMethods.finedOne"(id) {
