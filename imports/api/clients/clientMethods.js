@@ -19,13 +19,18 @@ Meteor.methods({
     if (!this.userId) {
       throw new Meteor.Error("not-authorized");
     }
-    Clients.insert({
+    let clientSchema = {
       id_card: client.idCard,
       name: client.name,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username
-    });
+    };
+    if (client._id) {
+      Clients.update({ _id: client._id }, clientSchema);
+    } else {
+      Clients.insert(clientSchema);
+    }
   },
 
   "clientMethods.remove"(id) {

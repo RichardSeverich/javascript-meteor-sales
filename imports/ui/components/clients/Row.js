@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class Row extends Component {
   constructor(props) {
     super(props);
     this.delete = this.delete.bind(this);
+    this.edit = this.edit.bind(this);
   }
 
   delete(id) {
@@ -17,6 +19,13 @@ class Row extends Component {
           alert("cliente tiene ventas");
         }
       }
+    });
+  }
+
+  edit(client) {
+    this.props.history.push({
+      pathname: "/clients-form",
+      client: client
     });
   }
 
@@ -38,7 +47,10 @@ class Row extends Component {
         <td scope="col">{date}</td>
         <td scope="col">{item.username}</td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.edit.bind(this, item)}
+            className="ui basic button"
+          >
             <i className="edit icon"></i>
             Editar
           </button>
@@ -56,4 +68,4 @@ class Row extends Component {
     );
   }
 }
-export default Row;
+export default withRouter(Row);

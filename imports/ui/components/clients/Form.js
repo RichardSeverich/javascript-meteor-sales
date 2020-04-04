@@ -6,11 +6,12 @@ import NavigationBar from "./../nav-bar/NavigationBar";
 class Form extends Component {
   constructor(props) {
     super(props);
+    this.state = { client: this.props.location.client };
     this.handleCreate = this.handleCreate.bind(this);
   }
 
-  handleCreate(event) {
-    event.preventDefault();
+  handleCreate() {
+    //event.preventDefault();
     // Find the text field via the React ref
     let idCard = ReactDOM.findDOMNode(this.refs.idCard).value.trim();
     let name = ReactDOM.findDOMNode(this.refs.name).value.trim();
@@ -18,6 +19,10 @@ class Form extends Component {
       idCard: parseInt(idCard),
       name
     };
+    if (this.setState.client) {
+      client._id = this.setState.client._id;
+      this.setState({ client: undefined });
+    }
     Meteor.call("clientMethods.insert", client, function(error, result) {
       if (error) {
         alert(error);
@@ -30,6 +35,10 @@ class Form extends Component {
   }
 
   render() {
+    let client = this.props.location.client;
+    if (!client) {
+      client = { id_card: "", name: "" };
+    }
     return (
       <div>
         <NavigationBar></NavigationBar>
@@ -45,6 +54,7 @@ class Form extends Component {
                     <label>Nit o CI</label>
                     <input
                       ref="idCard"
+                      defaultValue={client.id_card}
                       type="number"
                       className="form-control"
                       min="1"
@@ -54,6 +64,7 @@ class Form extends Component {
                     <label>Apellido</label>
                     <input
                       ref="name"
+                      defaultValue={client.name}
                       type="text"
                       className="form-control"
                       minLength="3"
@@ -65,6 +76,7 @@ class Form extends Component {
                       onClick={this.handleCreate.bind(this)}
                       type="button"
                       className="ui basic button"
+                      s
                     >
                       <i className="save icon"></i>Guardar
                     </button>
