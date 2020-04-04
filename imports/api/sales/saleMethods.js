@@ -25,8 +25,6 @@ Meteor.methods({
     }
     let sale = {
       client_id: client._id,
-      client_id_card: client.id_card,
-      client_name: client.name,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username
