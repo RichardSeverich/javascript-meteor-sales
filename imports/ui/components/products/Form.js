@@ -10,6 +10,7 @@ import NavigationBar from "./../nav-bar/NavigationBar";
 class Form extends Component {
   constructor(props) {
     super(props);
+    this.state = { product: this.props.location.product };
     this.handleCreate = this.handleCreate.bind(this);
   }
 
@@ -24,6 +25,10 @@ class Form extends Component {
       price: parseInt(price),
       quantity: parseInt(quantity)
     };
+    if (this.state.product) {
+      product._id = this.state.product._id;
+      this.setState({ product: undefined });
+    }
     Meteor.call("productMethods.insert", product, function(error, result) {
       if (error) {
         alert(error);
@@ -38,6 +43,10 @@ class Form extends Component {
   }
 
   render() {
+    let product = this.props.location.product;
+    if (!product) {
+      product = { name: "", price: "", quantity: "" };
+    }
     return (
       <div>
         <NavigationBar></NavigationBar>
@@ -53,6 +62,7 @@ class Form extends Component {
                     <label>Nombre</label>
                     <input
                       ref="name"
+                      defaultValue={product.name}
                       type="text"
                       className="form-control"
                       minLength="3"
@@ -63,6 +73,7 @@ class Form extends Component {
                     <label>Precio</label>
                     <input
                       ref="price"
+                      defaultValue={product.price}
                       type="number"
                       className="form-control"
                       min="1"
@@ -73,6 +84,7 @@ class Form extends Component {
                     <label>Stock</label>
                     <input
                       ref="quantity"
+                      defaultValue={product.quantity}
                       type="number"
                       className="form-control"
                       min="1"

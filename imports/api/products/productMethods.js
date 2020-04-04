@@ -20,14 +20,19 @@ Meteor.methods({
     if (!this.userId) {
       throw new Meteor.Error("not-authorized");
     }
-    Products.insert({
+    let productSchema = {
       name: product.name,
       price: product.price,
       quantity: product.quantity,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username
-    });
+    };
+    if (product._id) {
+      Products.update({ _id: product._id }, productSchema);
+    } else {
+      Products.insert(productSchema);
+    }
   },
 
   "productMethods.remove"(id) {

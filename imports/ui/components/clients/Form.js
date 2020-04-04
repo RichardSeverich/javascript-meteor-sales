@@ -19,8 +19,8 @@ class Form extends Component {
       idCard: parseInt(idCard),
       name
     };
-    if (this.setState.client) {
-      client._id = this.setState.client._id;
+    if (this.state.client) {
+      client._id = this.state.client._id;
       this.setState({ client: undefined });
     }
     Meteor.call("clientMethods.insert", client, function(error, result) {
