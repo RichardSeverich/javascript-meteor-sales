@@ -6,6 +6,7 @@ import NavigationBar from "./../nav-bar/NavigationBar";
 class Form extends Component {
   constructor(props) {
     super(props);
+    this.state = { sale: this.props.location.sale };
     this.handleCreate = this.handleCreate.bind(this);
   }
 
@@ -13,10 +14,14 @@ class Form extends Component {
     event.preventDefault();
     // Find the text field via the React ref
     let idCard = ReactDOM.findDOMNode(this.refs.idCard).value.trim();
-    let client = {
+    let sale = {
       idCard: parseInt(idCard)
     };
-    Meteor.call("saleMethods.insert", client, function(error, result) {
+    if (this.state.sale) {
+      sale._id = this.state.sale._id;
+      this.setState({ sale: undefined });
+    }
+    Meteor.call("saleMethods.insert", sale, function(error, result) {
       if (error) {
         alert(error);
       } else {
@@ -27,6 +32,10 @@ class Form extends Component {
   }
 
   render() {
+    let sale = this.props.location.sale;
+    if (!sale) {
+      sale = { client_id_card: "" };
+    }
     return (
       <div>
         <NavigationBar></NavigationBar>
@@ -42,6 +51,7 @@ class Form extends Component {
                     <label>Nit o CI</label>
                     <input
                       ref="idCard"
+                      defaultValue={sale.client_id_card}
                       type="number"
                       className="form-control"
                       min="1"

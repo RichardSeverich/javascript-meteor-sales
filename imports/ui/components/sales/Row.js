@@ -6,6 +6,7 @@ class Row extends Component {
     super(props);
     this.delete = this.delete.bind(this);
     this.navigateAddProducts = this.navigateAddProducts.bind(this);
+    this.edit = this.edit.bind(this);
   }
 
   delete(id) {
@@ -19,6 +20,13 @@ class Row extends Component {
           alert("venta tiene productos vendidos");
         }
       }
+    });
+  }
+
+  edit(sale) {
+    this.props.history.push({
+      pathname: "/sales-form",
+      sale: sale
     });
   }
 
@@ -73,7 +81,10 @@ class Row extends Component {
           </button>
         </td>
         <td scope="col">
-          <button className="ui basic button">
+          <button
+            onClick={this.edit.bind(this, item)}
+            className="ui basic button"
+          >
             <i className="edit icon"></i>
             Editar
           </button>

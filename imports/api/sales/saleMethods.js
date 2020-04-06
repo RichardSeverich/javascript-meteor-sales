@@ -13,23 +13,28 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  "saleMethods.insert"(data) {
-    check(data.idCard, Number);
+  "saleMethods.insert"(sale) {
+    check(sale.idCard, Number);
     // Make sure the user is logged in before inserting a task
     if (!this.userId) {
       throw new Meteor.Error("not-authorized");
     }
-    let client = Clients.findOne({ id_card: data.idCard });
+    let client = Clients.findOne({ id_card: sale.idCard });
     if (!client) {
       throw new Meteor.Error("client-dont-exist");
     }
-    let sale = {
+    let saleSchema = {
       client_id: client._id,
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username
     };
-    Sales.insert(sale);
+
+    if (sale._id) {
+      Sales.update({ _id: sale._id }, saleSchema);
+    } else {
+      Sales.insert(saleSchema);
+    }
   },
 
   "saleMethods.remove"(id) {
