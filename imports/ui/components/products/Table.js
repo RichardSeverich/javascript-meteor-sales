@@ -35,8 +35,12 @@ class Table extends Component {
                     <th scope="col">nombre</th>
                     <th scope="col">precio</th>
                     <th scope="col">stock</th>
-                    <th scope="col">fecha (año-mes-dia)</th>
-                    <th scope="col">creado por</th>
+                    <th style={{ maxWidth: "120px" }} scope="col">
+                      fecha Creacion/Edicion (año-mes-dia)
+                    </th>
+                    <th style={{ maxWidth: "90px" }} scope="col">
+                      Creado / Editado por
+                    </th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
