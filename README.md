@@ -2,7 +2,7 @@
 
 This project was created with `meteor create --react` command.
 
-This project is using React, Semantic, MongoD, Meteor Methods, Collections, Publish and Subscribe.
+This project is using React, Semantic, MongoDB, Meteor Methods, Collections, Publish and Subscribe.
 
 ## Prerequisites 🚀
 
