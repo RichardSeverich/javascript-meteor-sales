@@ -2,6 +2,8 @@
 
 This project was created with `meteor create --react` command.
 
+This project is using React, Semantic, MongoD, Meteor Methods, Collections, Publish and Subscribe.
+
 ## Prerequisites 🚀
 
 1. Install Ubuntu 18.04.3 LTS
