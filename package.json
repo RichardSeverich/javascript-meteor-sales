@@ -3,6 +3,11 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "start-conf": "meteor run --settings settings.json",
+    "start-externaldb_example1": "MONGO_URL=mongodb://<USER>:<PASSWORD>@<HOST>:<PORT>/<DB_NAME> meteor run",
+    "start-externaldb_example2": "MONGO_URL=mongodb://<SERVER>:<PORT>/<DB_NAME> meteor run",
+    "start-externaldb": "MONGO_URL=mongodb://username:password@host_url:portnumber/dbname meteor run",
+    "start-externaldb-conf": "MONGO_URL=mongodb://localhost:47017/dbname meteor run --settings settings.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
