@@ -1,17 +1,27 @@
 {
-  "name": "javascript-meteor-todo",
+  "name": "javascript-meteor-sales",
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "start-conf": "meteor run --settings settings.json",
+    "start-externaldb_example1": "MONGO_URL=mongodb://<USER>:<PASSWORD>@<HOST>:<PORT>/<DB_NAME> meteor run",
+    "start-externaldb_example2": "MONGO_URL=mongodb://<SERVER>:<PORT>/<DB_NAME> meteor run",
+    "start-externaldb": "MONGO_URL=mongodb://username:password@host_url:portnumber/dbname meteor run",
+    "start-externaldb-conf": "MONGO_URL=mongodb://localhost:47017/dbname meteor run --settings settings.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.0",
-    "meteor-node-stubs": "^1.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "@babel/runtime": "7.6.0",
+    "bcrypt": "3.0.8",
+    "classnames": "2.2.6",
+    "meteor-node-stubs": "1.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-redux": "7.1.3",
+    "react-router-dom": "5.1.2",
+    "redux": "4.0.5"
   },
   "meteor": {
     "mainModule": {

@@ -1,8 +1,20 @@
-import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import { render } from 'react-dom';
-import App from '/imports/ui/App'
+// Meteor
+import { Meteor } from "meteor/meteor";
+// React
+import React from "react";
+import { render } from "react-dom";
+// React - Router
+import { BrowserRouter as Router } from "react-router-dom";
+// Routes
+import AppRoutes from "../imports/ui/AppRoutes";
+// User Accounts
+import "../imports/startup/accounts-confg.js";
 
 Meteor.startup(() => {
-  render(<App />, document.getElementById('react-target'));
+  render(
+    <Router>
+      <AppRoutes />
+    </Router>,
+    document.getElementById("react-target")
+  );
 });
